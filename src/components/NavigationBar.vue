@@ -30,6 +30,13 @@ import MailIcon from '@/assets/icons/email.svg'
         />
       </a>
     </div>
+    <div>
+      <div class="p-1 border border-white text-white font-bold flex items-center">
+        <h1 class="text-red-700">O</h1>
+        <h1 class="text-white">.</h1>
+        <h1 class="text-red-700">O</h1>
+      </div>
+    </div>
     <div class="">
       <a
         href="/public/OlamideOlumomi.pdf"
