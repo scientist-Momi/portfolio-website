@@ -1,12 +1,17 @@
 <script setup>
 import NavigationBar from '@/components/NavigationBar.vue'
+import TechnologiesBar from '@/components/TechnologiesBar.vue'
 </script>
 
 <template>
   <div>
     <NavigationBar />
     <div class="flex items-start justify-center border-b border-white">
-      <h1 class="text-8xl text-red-700 font-extrabold text-outline text-center">Olamide Olumomi</h1>
+        <div class="">
+<h1 class="text-8xl text-red-700 font-extrabold text-outline text-center">Olamide Olumomi</h1>
+      <TechnologiesBar />
+        </div>
+      
     </div>
   </div>
 </template>
