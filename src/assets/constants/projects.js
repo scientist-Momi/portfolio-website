@@ -1,10 +1,10 @@
-export const sidebarMenu = [
+export const projects = [
   {
     id: 1,
     title: 'AI Chatbot',
     description: 'A conversational AI chatbot built with Python and TensorFlow.',
     technologies: ['Python', 'TensorFlow', 'NLP'],
-    images: ['/images/projects/ai-chatbot-1.png', '/images/projects/ai-chatbot-2.png'],
+    images: ['/public/project_images/project1.png', '/public/project_images/project1.png'],
     link: 'https://github.com/scientist-Momi/ai-chatbot',
     demo: 'https://ai-chatbot-demo.vercel.app/',
     year: 2025,
@@ -15,7 +15,7 @@ export const sidebarMenu = [
     description:
       'My personal portfolio website built with Vue.js and Tailwind CSS to showcase my projects and skills.',
     technologies: ['Vue.js', 'Tailwind CSS', 'Vite'],
-    image: ['/images/projects/portfolio-website.png'],
+    images: ['/public/project_images/project1.png'],
     link: 'https://github.com/scientist-Momi/portfolio-website',
     demo: 'https://olamide-portfolio.vercel.app/',
     year: 2025,
@@ -26,7 +26,7 @@ export const sidebarMenu = [
     description:
       'A tool to assist with machine learning research, including dataset exploration and model evaluation.',
     technologies: ['Python', 'Pandas', 'Scikit-learn'],
-    image: ['/images/projects/ml-research-assistant.png'],
+    images: ['/public/project_images/project1.png'],
     link: 'https://github.com/scientist-Momi/ml-research-assistant',
     demo: '',
     year: 2024,

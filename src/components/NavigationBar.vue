@@ -5,7 +5,7 @@ import MailIcon from '@/assets/icons/email.svg'
 </script>
 
 <template>
-  <div class="flex items-center justify-between py-5">
+  <div class="flex items-center justify-between py-5 sticky top-0 bg-black z-10">
     <div class="flex items-center gap-2">
       <a href="https://github.com/scientist-Momi" target="_blank">
         <GithubIcon
