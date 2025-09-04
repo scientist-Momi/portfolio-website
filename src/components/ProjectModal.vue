@@ -1,12 +1,41 @@
 <script setup>
-import { computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { useModalStore } from '@/stores/modalStore'
+import PythonIcon from '@/assets/icons/python.svg'
+import JavascriptIcon from '@/assets/icons/javascript.svg'
+import VueIcon from '@/assets/icons/vuejs.svg'
+import LaravelIcon from '@/assets/icons/laravel.svg'
+import PhpIcon from '@/assets/icons/php.svg'
+import SpringIcon from '@/assets/icons/fruhlingsstiefel.svg'
+import JavaIcon from '@/assets/icons/java.svg'
+import GithubIcon from '@/assets/icons/github.svg'
+import InternetIcon from '@/assets/icons/internet.svg'
 
 const modal = useModalStore()
 const project = computed(() => modal.data)
 
 function close() {
   modal.close()
+}
+
+const selectedImage = ref(null)
+
+watch(project, (newProject) => {
+  if (newProject && newProject.images && newProject.images.length > 0) {
+    selectedImage.value = newProject.images[0]
+  } else {
+    selectedImage.value = null
+  }
+})
+
+const techIcons = {
+  'python.svg': PythonIcon,
+  'javascript.svg': JavascriptIcon,
+  'vuejs.svg': VueIcon,
+  'laravel.svg': LaravelIcon,
+  'php.svg': PhpIcon,
+  'fruhlingsstiefel.svg': SpringIcon,
+  'java.svg': JavaIcon,
 }
 </script>
 
@@ -19,9 +48,10 @@ function close() {
       <Transition name="slide-up-modal">
         <div
           v-show="modal.isOpen"
-          class="bg-black border border-gray-700 rounded shadow-lg w-[60vw] h-fit mt-[15vh] flex flex-col"
+          class="bg-black border border-gray-700 rounded shadow-lg w-[95vw] h-fit mt-[5vh] flex pb-6 flex-col"
+          @click.stop
         >
-          <div class="px-4 pt-2 text-base font-semibold flex justify-end items-center">
+          <div class="px-4 pt-2  text-base font-semibold flex justify-end items-center">
             <button
               class="text-gray-400 hover:text-gray-600 text-2xl cursor-pointer"
               @click="modal.close()"
@@ -32,13 +62,71 @@ function close() {
           </div>
           <div class="overflow-y-hidden flex-1">
             <div class="p-6 px-6 py-3" v-if="project">
-              <p class="text-red-500 text-2xl">
-                {{ project.title }}
-              </p>
+              <div class="flex gap-10 justify-center">
+                <div
+                  v-if="project.images && project.images.length"
+                  class="flex flex-col items-center"
+                >
+                  <div class="w-full flex justify-center mb-4">
+                    <img
+                      :src="selectedImage"
+                      alt="Project main"
+                      class="rounded-lg max-h-160 object-contain bg-gray-800 w-full"
+                      style="max-width: 100%"
+                    />
+                  </div>
+                  <div class="flex gap-2 justify-center">
+                    <img
+                      v-for="(img, idx) in project.images"
+                      :key="idx"
+                      :src="img"
+                      alt="Project thumbnail"
+                      class="w-16 h-16 object-cover rounded cursor-pointer border-2"
+                      :class="selectedImage === img ? 'border-red-500' : 'border-gray-700'"
+                      @click.stop="selectedImage = img"
+                    />
+                  </div>
+                </div>
+                <div class="">
+                  <p class="text-white text-2xl font-bold">
+                    {{ project.title }}
+                  </p>
+                  <p class="text-gray-400 mt-2">
+                    {{ project.description }}
+                  </p>
+                  <div class="flex gap-2 mt-10">
+                    <component
+                      v-for="tech in project.technologies"
+                      :key="tech.name"
+                      :is="techIcons[tech.icon]"
+                      :title="tech.name"
+                      class="w-8 h-8"
+                    />
+                  </div>
+                  <div class="flex gap-4 mt-10">
+                    <a
+                      v-if="project.link"
+                      :href="project.link"
+                      target="_blank"
+                      class="border border-gray-500 p-2 text-white hover:bg-gray-800 text-sm flex items-center gap-2"
+                    >
+                      <GithubIcon width="20" height="20" />
+                      Source Code</a
+                    >
+                    <a
+                      v-if="project.demo"
+                      :href="project.demo"
+                      target="_blank"
+                      class="border border-gray-500 p-2 text-white hover:bg-gray-800 text-sm flex items-center gap-2"
+                    >
+                      <InternetIcon width="20" height="20" />
+                      Live Demo</a
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
-            <div v-else>
-                nothing
-            </div>
+            <div v-else>nothing</div>
           </div>
         </div>
       </Transition>

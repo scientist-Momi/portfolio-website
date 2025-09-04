@@ -8,7 +8,7 @@ export const projects = [
       { name: 'Javascript', icon: 'javascript.svg' },
       { name: 'Vue.js', icon: 'vuejs.svg' },
     ],
-    images: ['/public/project_images/project1.png', '/public/project_images/project1.png'],
+    images: ['/public/project_images/project1.png', '/public/project_images/project2.png'],
     link: 'https://github.com/scientist-Momi/ai-chatbot',
     demo: 'https://ai-chatbot-demo.vercel.app/',
     year: 2025,
