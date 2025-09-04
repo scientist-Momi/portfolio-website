@@ -23,23 +23,27 @@ const modal = useModalStore()
 </script>
 
 <template>
-  <div class="flex gap-4">
-    <div class="flex gap-1 border-white">
-      <h1 class="text-6xl text-white font-medium">Projects</h1>
+  <div class="flex flex-col lg:flex-row gap-4 px-2">
+    <div class="flex gap-1 border-white mb-6">
+      <h1 class="text-4xl md:text-6xl text-white font-medium">Projects</h1>
       <sup>
-        <span class="bg-red-500 text-white px-1 text-2xl">{{ projects.length }}</span>
+        <span class="bg-red-500 text-white px-1 text-lg md:text-2xl">{{ projects.length }}</span>
       </sup>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div v-for="project in projects" :key="project.id" class="bg-black">
-        <div class="mb-2 aspect-video relative group overflow-hidden rounded">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 gap-y-8 w-full">
+      <div
+        v-for="project in projects"
+        :key="project.id"
+        class="bg-black border border-gray-700 p-4 flex flex-col"
+      >
+        <div class="mb-2 aspect-video relative group overflow-hidden">
           <img
             :src="project.images[0]"
             :alt="`${project.title} main screenshot`"
             class="w-full h-full object-cover"
           />
           <div
-            class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300"
+            class="hidden md:flex absolute inset-0 bg-black bg-opacity-70 items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300"
           >
             <span
               @click="modal.open(project)"
@@ -48,17 +52,22 @@ const modal = useModalStore()
             >
           </div>
         </div>
-        <div class="flex gap-2 my-4">
+        <div class="flex gap-2 my-4 flex-wrap">
           <component
             v-for="tech in project.technologies"
             :key="tech.name"
             :is="techIcons[tech.icon]"
             :title="tech.name"
-            class="w-8 h-8"
+            class="w-7 h-7 md:w-8 md:h-8"
           />
         </div>
-        <h2 class="text-xl font-bold mb-2 text-white">{{ project.title }}</h2>
-        <p class="text-gray-300 mb-2">{{ project.description }}</p>
+        <h2 class="text-lg md:text-xl font-bold mb-2 text-white">{{ project.title }}</h2>
+        <p class="text-gray-300 mb-2 text-xs md:text-base">{{ project.description }}</p>
+        <span
+          @click="modal.open(project)"
+          class="block md:hidden text-white text-xs border border-gray-500 p-2 cursor-pointer w-max"
+          >View Details</span
+        >
       </div>
     </div>
   </div>

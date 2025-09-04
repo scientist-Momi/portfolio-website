@@ -11,65 +11,49 @@ import JavaIcon from '@/assets/icons/java.svg'
 <template>
   <div class="flex flex-col items-center justify-center">
     <p class="text-gray-500">Technologies:</p>
-    <div class="flex items-center justify-center mt-2">
+    <div class="flex flex-wrap items-center justify-center mt-2 gap-4">
       <div class="flex flex-col items-center mx-2 gap-0.5">
         <JavaIcon
-          width="65"
-          height="65"
-          class="p-1 border border-gray-500 cursor-pointer hover:bg-gray-800"
+          class="w-12 h-12 md:w-16 md:h-16 p-1 border border-gray-500 cursor-pointer hover:bg-gray-800"
         />
         <small class="text-white">Java</small>
       </div>
       <div class="flex flex-col items-center mx-2 gap-0.5">
         <PythonIcon
-          width="65"
-          height="65"
-          class="p-1 border border-gray-500 cursor-pointer hover:bg-gray-800"
+          class="w-12 h-12 md:w-16 md:h-16 p-1 border border-gray-500 cursor-pointer hover:bg-gray-800"
         />
         <small class="text-white">Python</small>
       </div>
       <div class="flex flex-col items-center mx-2 gap-0.5">
         <JavascriptIcon
-          width="65"
-          height="65"
-          class="p-1 border border-gray-500 cursor-pointer hover:bg-gray-800"
+          class="w-12 h-12 md:w-16 md:h-16 p-1 border border-gray-500 cursor-pointer hover:bg-gray-800"
         />
         <small class="text-white">Javascript</small>
       </div>
       <div class="flex flex-col items-center mx-2 gap-0.5">
         <VueIcon
-          width="65"
-          height="65"
-          class="p-1 border border-gray-500 cursor-pointer hover:bg-gray-800"
+          class="w-12 h-12 md:w-16 md:h-16 p-1 border border-gray-500 cursor-pointer hover:bg-gray-800"
         />
         <small class="text-white">VueJS</small>
       </div>
       <div class="flex flex-col items-center mx-2 gap-0.5">
         <LaravelIcon
-          width="65"
-          height="65"
-          class="p-1 border border-gray-500 cursor-pointer hover:bg-gray-800"
+          class="w-12 h-12 md:w-16 md:h-16 p-1 border border-gray-500 cursor-pointer hover:bg-gray-800"
         />
         <small class="text-white">Laravel</small>
       </div>
       <div class="flex flex-col items-center mx-2 gap-0.5">
         <PhpIcon
-          width="65"
-          height="65"
-          class="p-1 border border-gray-500 cursor-pointer hover:bg-gray-800"
+          class="w-12 h-12 md:w-16 md:h-16 p-1 border border-gray-500 cursor-pointer hover:bg-gray-800"
         />
         <small class="text-white">PHP</small>
       </div>
       <div class="flex flex-col items-center mx-2 gap-0.5">
         <SpringIcon
-          width="65"
-          height="65"
-          class="p-1 border border-gray-500 cursor-pointer hover:bg-gray-800"
+          class="w-12 h-12 md:w-16 md:h-16 p-1 border border-gray-500 cursor-pointer hover:bg-gray-800"
         />
         <small class="text-white">Spring Boot</small>
       </div>
     </div>
   </div>
 </template>
-
-<style scoped></style>
