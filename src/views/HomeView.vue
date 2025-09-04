@@ -3,6 +3,7 @@ import NavigationBar from '@/components/NavigationBar.vue'
 import TechnologiesBar from '@/components/TechnologiesBar.vue'
 import ProjectsBar from '@/components/ProjectsBar.vue'
 import ProjectModal from '@/components/ProjectModal.vue'
+import FooterBar from '@/components/FooterBar.vue'
 </script>
 
 <template>
@@ -12,7 +13,7 @@ import ProjectModal from '@/components/ProjectModal.vue'
       <div>
         <h1 class="text-6xl md:text-8xl text-white font-extrabold text-center">Olamide Olumomi</h1>
         <p class="mt-4 text-base md:text-lg text-gray-400 text-center">
-          Computer Science & Artificial Intelligence Student passionate about building intelligent
+          Computer Science & Artificial Intelligence Enthusiast passionate about building intelligent
           solutions.
         </p>
         <ul class="mt-4 text-xs md:text-sm text-gray-300 flex gap-1 flex-wrap justify-center">
@@ -28,6 +29,7 @@ import ProjectModal from '@/components/ProjectModal.vue'
     <div class="border-white mt-10">
       <ProjectsBar />
     </div>
+    <FooterBar />
     <ProjectModal />
   </div>
 </template>
