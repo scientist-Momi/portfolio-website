@@ -34,7 +34,7 @@ import JavaIcon from '@/assets/icons/java.svg'
           height="65"
           class="p-1 border border-gray-500 cursor-pointer hover:bg-gray-800"
         />
-        <small class="text-white">Javascripr</small>
+        <small class="text-white">Javascript</small>
       </div>
       <div class="flex flex-col items-center mx-2 gap-0.5">
         <VueIcon
