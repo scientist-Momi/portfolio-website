@@ -2,6 +2,7 @@
 import NavigationBar from '@/components/NavigationBar.vue'
 import TechnologiesBar from '@/components/TechnologiesBar.vue'
 import ProjectsBar from '@/components/ProjectsBar.vue'
+import ProjectModal from '@/components/ProjectModal.vue'
 </script>
 
 <template>
@@ -27,6 +28,7 @@ import ProjectsBar from '@/components/ProjectsBar.vue'
     <div class="border-white mt-10">
       <ProjectsBar />
     </div>
+    <ProjectModal />
   </div>
 </template>
 

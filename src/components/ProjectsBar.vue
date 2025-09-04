@@ -7,6 +7,7 @@ import LaravelIcon from '@/assets/icons/laravel.svg'
 import PhpIcon from '@/assets/icons/php.svg'
 import SpringIcon from '@/assets/icons/fruhlingsstiefel.svg'
 import JavaIcon from '@/assets/icons/java.svg'
+import { useModalStore } from '@/stores/modalStore'
 
 const techIcons = {
   'python.svg': PythonIcon,
@@ -17,6 +18,8 @@ const techIcons = {
   'fruhlingsstiefel.svg': SpringIcon,
   'java.svg': JavaIcon,
 }
+
+const modal = useModalStore()
 </script>
 
 <template>
@@ -38,7 +41,9 @@ const techIcons = {
           <div
             class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300"
           >
-            <span class="text-white text-sm border border-white p-2 cursor-pointer"
+            <span
+              @click="modal.open(project)"
+              class="text-white text-sm border border-white p-2 cursor-pointer"
               >View Details</span
             >
           </div>
