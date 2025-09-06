@@ -6,9 +6,8 @@ import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import svgLoader from 'vite-svg-loader'
 
-// https://vite.dev/config/
 export default defineConfig({
-  base: "/portfolio-website/",
+  base: "/",
   plugins: [vue(), vueDevTools(), tailwindcss(), svgLoader()],
   resolve: {
     alias: {

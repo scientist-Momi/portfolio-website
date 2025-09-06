@@ -81,7 +81,7 @@ const menuOpen = ref(false)
         </svg>
       </button>
       <a
-        href="/OlamideOlumomi.pdf"
+        href="OlamideOlumomi.pdf"
         target="_blank"
         rel="noopener"
         class="hidden md:inline-block p-2 text-sm border border-red-700 text-white cursor-pointer hover:bg-red-700"
@@ -122,7 +122,7 @@ const menuOpen = ref(false)
         </a>
       </div>
       <a
-        href="/OlamideOlumomi.pdf"
+        href="OlamideOlumomi.pdf"
         target="_blank"
         rel="noopener"
         class="p-2 text-sm border border-red-700 text-white cursor-pointer hover:bg-red-700"
