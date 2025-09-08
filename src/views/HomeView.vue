@@ -17,11 +17,11 @@ import FooterBar from '@/components/FooterBar.vue'
           solutions.
         </p>
         <ul class="mt-4 text-xs md:text-sm text-gray-300 flex gap-1 flex-wrap justify-center">
-          <li class="border border-gray-500 p-1">Machine Learning Engineer</li>
-          <li class="border border-gray-500 p-1">Data Scientist</li>
-          <li class="border border-gray-500 p-1">Software Developer</li>
-          <li class="border border-gray-500 p-1">AI Research Assistant</li>
-          <li class="border border-gray-500 p-1">Backend Developer</li>
+          <li class="border border-gray-500 p-1">Machine Learning</li>
+          <li class="border border-gray-500 p-1">Data Science</li>
+          <li class="border border-gray-500 p-1">Software Development</li>
+          <li class="border border-gray-500 p-1">AI Research</li>
+          <li class="border border-gray-500 p-1">Backend Development</li>
         </ul>
         <TechnologiesBar class="mt-8 md:mt-10" />
       </div>

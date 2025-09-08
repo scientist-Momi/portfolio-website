@@ -1,45 +1,29 @@
 export const projects = [
   {
     id: 1,
-    title: 'AI Chatbot',
-    description: 'A conversational AI chatbot built with Python and TensorFlow.',
-    technologies: [
-      { name: 'Python', icon: 'python.svg' },
-      { name: 'Javascript', icon: 'javascript.svg' },
-      { name: 'Vue.js', icon: 'vuejs.svg' },
-    ],
-    images: ['project_images/project1.png', 'project_images/project2.png'],
-    link: 'https://github.com/scientist-Momi/ai-chatbot',
-    demo: 'https://ai-chatbot-demo.vercel.app/',
-    year: 2025,
-  },
-  {
-    id: 2,
-    title: 'Portfolio Website',
+    title: 'Qwaklan - Customer Product Management System',
     description:
-      'My personal portfolio website built with Vue.js and Tailwind CSS to showcase my projects and skills.',
+      'Qwaklan is a robust, full-stack web application purpose-built to streamline customer and product management operations for modern businesses. The system offers an intuitive admin dashboard where team members can manage customers, track products and variants, process transactions, handle returns and wallets, and visualize key business metrics in real time. Powered by a scalable Java Spring Boot backend with a secure MySQL database, Qwaklan delivers reliable RESTful APIs for all core features, including authentication and granular permissions. The Vue.js 3 frontend provides a fast, dynamic experience, leveraging Tailwind CSS for a responsive, polished interface that adapts seamlessly to desktop and mobile.',
     technologies: [
-      { name: 'Python', icon: 'python.svg' },
-        { name: 'Javascript', icon: 'javascript.svg' },
-        { name: 'Java', icon: 'java.svg' },
-    ],
-    images: ['project_images/project1.png'],
-    link: 'https://github.com/scientist-Momi/portfolio-website',
-    demo: 'https://olamide-portfolio.vercel.app/',
-    year: 2025,
-  },
-  {
-    id: 3,
-    title: 'ML Research Assistant',
-    description:
-      'A tool to assist with machine learning research, including dataset exploration and model evaluation.',
-    technologies: [
-      { name: 'Python', icon: 'python.svg' },
       { name: 'Java', icon: 'java.svg' },
+      { name: 'Spring', icon: 'spring.svg' },
+      { name: 'Vue.js', icon: 'vuejs.svg' },
+      { name: 'MySQL', icon: 'mysql.svg' },
+      { name: 'TailwindCSS', icon: 'tailwindcss.svg' },
     ],
-    images: ['project_images/project1.png'],
-    link: 'https://github.com/scientist-Momi/ml-research-assistant',
-    demo: '',
-    year: 2024,
+    images: [
+      'project_images/p08.png',
+      'project_images/p01.png',
+      'project_images/p02.png',
+      'project_images/p03.png',
+      'project_images/p04.png',
+      'project_images/p05.png',
+      'project_images/p06.png',
+      'project_images/p07.png',
+    ],
+    link: 'https://github.com/scientist-Momi/frontend-cpms',
+    // demo: 'https://ai-chatbot-demo.vercel.app/',
+    year: 2025,
   },
+
 ]

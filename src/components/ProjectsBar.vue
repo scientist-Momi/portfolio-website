@@ -5,8 +5,10 @@ import JavascriptIcon from '@/assets/icons/javascript.svg'
 import VueIcon from '@/assets/icons/vuejs.svg'
 import LaravelIcon from '@/assets/icons/laravel.svg'
 import PhpIcon from '@/assets/icons/php.svg'
-import SpringIcon from '@/assets/icons/fruhlingsstiefel.svg'
+import SpringIcon from '@/assets/icons/spring.svg'
 import JavaIcon from '@/assets/icons/java.svg'
+import MySQLIcon from '@/assets/icons/mysql.svg'
+import TailwindCSSIcon from '@/assets/icons/tailwind-css.svg'
 import { useModalStore } from '@/stores/modalStore'
 
 const techIcons = {
@@ -15,8 +17,10 @@ const techIcons = {
   'vuejs.svg': VueIcon,
   'laravel.svg': LaravelIcon,
   'php.svg': PhpIcon,
-  'fruhlingsstiefel.svg': SpringIcon,
+  'spring.svg': SpringIcon,
   'java.svg': JavaIcon,
+  'mysql.svg': MySQLIcon,
+  'tailwindcss.svg': TailwindCSSIcon,
 }
 
 const modal = useModalStore()
@@ -62,7 +66,13 @@ const modal = useModalStore()
           />
         </div>
         <h2 class="text-lg md:text-xl font-bold mb-2 text-white">{{ project.title }}</h2>
-        <p class="text-gray-300 mb-2 text-xs md:text-base">{{ project.description }}</p>
+        <p class="text-gray-300 mb-2 text-xs md:text-base">
+          {{
+            project.description.length > 150
+              ? project.description.slice(0, 150) + '...'
+              : project.description
+          }}
+        </p>
         <span
           @click="modal.open(project)"
           class="block md:hidden text-white text-xs border border-gray-500 p-2 cursor-pointer w-max"

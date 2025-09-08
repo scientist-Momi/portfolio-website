@@ -6,10 +6,12 @@ import JavascriptIcon from '@/assets/icons/javascript.svg'
 import VueIcon from '@/assets/icons/vuejs.svg'
 import LaravelIcon from '@/assets/icons/laravel.svg'
 import PhpIcon from '@/assets/icons/php.svg'
-import SpringIcon from '@/assets/icons/fruhlingsstiefel.svg'
+import SpringIcon from '@/assets/icons/spring.svg'
 import JavaIcon from '@/assets/icons/java.svg'
 import GithubIcon from '@/assets/icons/github.svg'
 import InternetIcon from '@/assets/icons/internet.svg'
+import MySQLIcon from '@/assets/icons/mysql.svg'
+import TailwindCSSIcon from '@/assets/icons/tailwind-css.svg'
 
 const modal = useModalStore()
 const project = computed(() => modal.data)
@@ -34,8 +36,10 @@ const techIcons = {
   'vuejs.svg': VueIcon,
   'laravel.svg': LaravelIcon,
   'php.svg': PhpIcon,
-  'fruhlingsstiefel.svg': SpringIcon,
+  'spring.svg': SpringIcon,
   'java.svg': JavaIcon,
+    'mysql.svg': MySQLIcon,
+  'tailwindcss.svg': TailwindCSSIcon
 }
 </script>
 

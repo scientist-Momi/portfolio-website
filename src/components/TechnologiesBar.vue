@@ -4,7 +4,7 @@ import JavascriptIcon from '@/assets/icons/javascript.svg'
 import VueIcon from '@/assets/icons/vuejs.svg'
 import LaravelIcon from '@/assets/icons/laravel.svg'
 import PhpIcon from '@/assets/icons/php.svg'
-import SpringIcon from '@/assets/icons/fruhlingsstiefel.svg'
+import SpringIcon from '@/assets/icons/spring.svg'
 import JavaIcon from '@/assets/icons/java.svg'
 </script>
 
@@ -52,7 +52,7 @@ import JavaIcon from '@/assets/icons/java.svg'
         <SpringIcon
           class="w-12 h-12 md:w-16 md:h-16 p-1 border border-gray-500 cursor-pointer hover:bg-gray-800"
         />
-        <small class="text-white">Spring Boot</small>
+        <small class="text-white">Spring</small>
       </div>
     </div>
   </div>
