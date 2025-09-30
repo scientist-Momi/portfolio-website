@@ -9,6 +9,7 @@ import SpringIcon from '@/assets/icons/spring.svg'
 import JavaIcon from '@/assets/icons/java.svg'
 import MySQLIcon from '@/assets/icons/mysql.svg'
 import TailwindCSSIcon from '@/assets/icons/tailwind-css.svg'
+import PostgresIcon from '@/assets/icons/postgresql.svg'
 import { useModalStore } from '@/stores/modalStore'
 
 const techIcons = {
@@ -21,6 +22,7 @@ const techIcons = {
   'java.svg': JavaIcon,
   'mysql.svg': MySQLIcon,
   'tailwindcss.svg': TailwindCSSIcon,
+    'postgresql.svg' : PostgresIcon
 }
 
 const modal = useModalStore()

@@ -12,6 +12,7 @@ import GithubIcon from '@/assets/icons/github.svg'
 import InternetIcon from '@/assets/icons/internet.svg'
 import MySQLIcon from '@/assets/icons/mysql.svg'
 import TailwindCSSIcon from '@/assets/icons/tailwind-css.svg'
+import PostgresIcon from '@/assets/icons/postgresql.svg'
 
 const modal = useModalStore()
 const project = computed(() => modal.data)
@@ -39,7 +40,8 @@ const techIcons = {
   'spring.svg': SpringIcon,
   'java.svg': JavaIcon,
     'mysql.svg': MySQLIcon,
-  'tailwindcss.svg': TailwindCSSIcon
+  'tailwindcss.svg': TailwindCSSIcon,
+  'postgresql.svg' : PostgresIcon
 }
 </script>
 
